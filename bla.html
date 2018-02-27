@@ -15,16 +15,54 @@
 		display: block;
 		text-decoration: none;
 		font-size: 30px;
-		font-family: georgia header;
+		font-family: 'Ubuntu', sans-serif;
 		color: #ffffff;
         border-color: red;
-		padding: 0px 20px;
+		padding: 0px 20px;}
+    h2{
+        font-family: 'Ubuntu', sans-serif;
+        display: inline;
+
+
+    }
 </style>
+<script type = "text/javascript">
+    var image = new Image()
+    image[1] = new Image()
+    image[1].src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/OstianInsula.JPG/220px-OstianInsula.JPG"
+    image[2] = new Image()
+    image[2].src = "http://www.ecdressage2011.com/thumbnail/e/eurotrip-2011-rome-pt-2-webner-house-6.jpeg"
+    image[3] = new Image()
+    image[3].src = "https://www.ancient.eu/uploads/images/2138.jpg?v=1485680546"
+    image[4] = new Image()
+    image[4].src = "https://img00.deviantart.net/a111/i/2007/049/5/f/marcus_licinius_crassus_by_bluehorseshoe.jpg"
+</script>
+<script type = "text/javascript">
+  var step=1
+    function slideit(){
+        if (!document.images)
+            return
+        document.getElementById('slide').src = image[step].src  
+        if(step<2)
+            step++
+        else
+            step=1
+         setTimeout("slideit()",2500)
+    }
+    slideit() 
+</script>
 <body>
-    <ul>
-        <li><a href = "#"> Home</a></li>
-        <li><a href = "#"> About Crassus Realtors</a></li>
-        <li><a href = "#"> Properties</a></li>
-        <li><a href = "#"> Contact Us</a></li>
-    </ul>
+    <div>
+        <ul>
+            <li><a href = "#"> Home</a></li>
+            <li><a href = "#"> About Crassus Realtors</a></li>
+            <li><a href = "#"> Properties</a></li>
+            <li><a href = "#"> Contact Us</a></li>
+        </ul>
+    </div>
+    <div>
+        <center><img src = "https://github.com/joshbarbee/CrassusRealtors/blob/master/Images/CrassusLogo.PNG?raw=true" style= "width: 300px; height: 150px"></center>
+        <center><h2>"At Crassus Realtors, we are dedicated to providing housing and apartments as cheap as possible, with only minimal risk of the building collapsing"</h2></center>
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/OstianInsula.JPG/220px-OstianInsula.JPG" id = "slide" width = "200" height = "200">
+    </div>
 </body>
