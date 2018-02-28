@@ -1,103 +1,44 @@
+<!DOCTYPE HTML>
+<html>
 <head>
+    <link rel="stylesheet" media = "all" type="text/css"href="CrassusStylesheet.css">
 </head>
-<style>
-    *{
-        margin: 0px;
-        padding: 0px;
-    }
-    body{
-        background-color: beige;
-    }
-    ul{
-		width: 100%;
-		text-align: center;
-		background-color: black
-	}
-	ul li {
-		list-style: none;
-		display: inline-block;
-		line-height: 50px;
 
-	}
-	ul li a{
-		display: block;
-		text-decoration: none;
-		font-size: 30px;
-		font-family: 'Ubuntu', sans-serif;
-		color: #ffffff;
-        border-color: red;
-		padding: 20px;}
-    h2{
-        font-family: 'Ubuntu', sans-serif;
-        display: inline;
-    }
-    slider{
-        display: block;
-        width: 60%;
-        height: 60%;
-        background-color: none;
-        overflow: hidden;
-        position: absolute;
-    }
-    slider > * {  
-        position: absolute;
-        display: block;
-        width: 60%;
-        height: 60%;
-        background: none;
-        animation: slide 12s infinite;
-        overflow: hidden;
-    }
-    slide:nth-child(1){
-        left: 0%;
-        animation-delay:-1s;
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/OstianInsula.JPG/220px-OstianInsula.JPG");
-        background-size: cover;
-        background-position: center;
-    }
-    slide:nth-child(2){
-       
-        animation-delay:2s;
-        background-image: url("http://www.ecdressage2011.com/thumbnail/e/eurotrip-2011-rome-pt-2-webner-house-6.jpeg");
-        background-size: cover;
-        background-position: center;}
-    slide:nth-child(3){
-        animation-delay:5s;
-        background-image: url("https://www.ancient.eu/uploads/images/2138.jpg?v=1485680546");
-        background-size: cover;
-        background-position: center;}
-    slide:nth-child(4){
-        left: 0%;
-        animation-delay:8s;
-        background-image: url("https://img00.deviantart.net/a111/i/2007/049/5/f/marcus_licinius_crassus_by_bluehorseshoe.jpg");
-        background-size: cover;
-        background-position: center;}
-    slide p{
-        font-family: 'Ubuntu', sans-serif;
-        font-size:30px;
-        text-align: center;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        color:white;
-    }
-    @keyframes slide {
-        0% {left:100%; width:60%;}
-        5% {left:0%;}
-        25% {left:0%}
-        30% {left:-100%; width:60%;}
-        30.0000001%{left: -100%; width: 0%}
-        100%{left:100%; width:0%;}
-    }
-    .LargeText{
-        padding: 1px;
-        font-family: 'Verdana', sans-serif;
-        float: right;
-        width: 550px;
-        
-    }
-</style>
+<script type="text/javascript">
+var slideIndex = 1;
+showSlides(slideIndex);
 
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var j;
+    //stupid javascript stuff. fetching html attributes by a class name. ala for loop
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    //resets the index
+    if (n > slides.length) {slideIndex = 1}
+    //incase of a indexing error. try/except basically 
+    if (n < 1) {slideIndex = slides.length}
+    //for loop that displays the images
+    for (j = 0; j < slides.length; j++) {
+        slides[i].style.display = "none"; 
+    }
+    //same thing as before, but changes class so that it transistions better and more beautiful
+    for (j = 0; j < dots.length; j++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    //displays current slids
+    slides[slideIndex-1].style.display = "block"; 
+    //highlights currently used dot
+    dots[slideIndex-1].className += " active";
+    }
+
+</script>
 <body>
     <div>
         <ul>
@@ -111,16 +52,47 @@
         <center><img src = "https://github.com/joshbarbee/CrassusRealtors/blob/master/Images/CrassusLogo.PNG?raw=true" style= "width: 300px; height: 150px"></center>
         <center><h2>"At Crassus Realtors, we are dedicated to providing housing and apartments as cheap as possible, with only minimal risk of the building collapsing"</h2></center>
     </div>
-    <div style="padding:20px">
-        <slider>
-            <slide><p>Ostian Apartments</p></slide>
-            <slide><p>Affordable Housing</p></slide>
-            <slide><p> More of Me</p></slide>
-            <slide><p>Even More of Me</p></slide>
-        </slider>
-    </div>
-    <div style="padding:20px">
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/OstianInsula.JPG/220px-OstianInsula.JPG" style="width:100%; height:100%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="http://www.ecdressage2011.com/thumbnail/e/eurotrip-2011-rome-pt-2-webner-house-6.jpeg" style="width:100% ; height:100%;">
+          <div class="text">Affordable Housing</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="http://historylink101.com/2/roman-villa.jpg" style="width:100%; height:100%;">
+          <div class="text">Bathhouses</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="https://img00.deviantart.net/a111/i/2007/049/5/f/marcus_licinius_crassus_by_bluehorseshoe.jpg" style="width:100%; height:100%;">
+            <div class="text"> About Us</div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+      </div>
+    <div style="padding:40px">
         <center><p class= LargeText> ----My Story----</p></center>
-        <p class= LargeText>Ever since being a small Roman child, I wanted to own property and exert my control over Macedonia. And one of those dreams has came true today. After inheriting lots of money from my deceased father and brother, I purchased a burning apartment and rebuilt, then resold it for major profits. Thats where it all began.</p>
+    </div><div>
+        <center><p class= LargeText>Ever since being a small Roman child, I wanted to own property and exert my control over Macedonia. And one of those dreams has came true today. After inheriting lots of money from my deceased father and brother, I purchased a burning apartment and rebuilt, then resold it for major profits. Thats where it all began.</p></center>
     </div>
 </body>
+</html>
