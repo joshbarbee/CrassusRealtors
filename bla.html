@@ -5,38 +5,41 @@
 </head>
 
 <script type="text/javascript">
-var slideIndex = 1;
-showSlides(slideIndex);
-
+    //protected under w3schools fair use policy. credits:https://www.w3schools.com/howto/howto_js_slideshow.asp"
+    //javascript sucks. 
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    var slideIndex=1
     function plusSlides(n) {
-    showSlides(slideIndex += n);
+        showSlides(slideIndex += n);
     }
     function currentSlide(n) {
-    showSlides(slideIndex = n);
+        showSlides(slideIndex = n);
     }
 
     function showSlides(n) {
-    var j;
-    //stupid javascript stuff. fetching html attributes by a class name. ala for loop
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    //resets the index
-    if (n > slides.length) {slideIndex = 1}
-    //incase of a indexing error. try/except basically 
-    if (n < 1) {slideIndex = slides.length}
-    //for loop that displays the images
-    for (j = 0; j < slides.length; j++) {
-        slides[i].style.display = "none"; 
-    }
-    //same thing as before, but changes class so that it transistions better and more beautiful
-    for (j = 0; j < dots.length; j++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    //displays current slids
-    slides[slideIndex-1].style.display = "block"; 
-    //highlights currently used dot
-    dots[slideIndex-1].className += " active";
-    }
+        var j;
+        //stupid javascript stuff. fetching html attributes by a class name. ala for loop
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        //resets the index
+        if (n > slides.length) {slideIndex = 1}
+        //incase of a indexing error. try/except basically 
+        if (n < 1) {slideIndex = slides.length}
+        //for loop that displays the images
+        for (j = 0; j < slides.length; j++) {
+            slides[j].style.display = "none"; 
+        }
+        //same thing as before, but changes class so that it transistions better and more beautiful
+        for (j = 0; j < dots.length; j++) {
+            dots[j].className = dots[j].className.replace(" active", "");
+        }
+        //displays current slids
+        slides[slideIndex-1].style.display = "block"; 
+        //highlights currently used dot
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
 
 </script>
 <body>
@@ -56,25 +59,22 @@ showSlides(slideIndex);
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/OstianInsula.JPG/220px-OstianInsula.JPG" style="width:100%; height:100%;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/OstianInsula.JPG/220px-OstianInsula.JPG" style="width:100%; height:100%;">
+            <center><div class="text"> Apartments</div></center>
         </div>
       
         <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img src="http://www.ecdressage2011.com/thumbnail/e/eurotrip-2011-rome-pt-2-webner-house-6.jpeg" style="width:100% ; height:100%;">
-          <div class="text">Affordable Housing</div>
+            <img src="http://www.ecdressage2011.com/thumbnail/e/eurotrip-2011-rome-pt-2-webner-house-6.jpeg" style="width:100% ; height:100%;">
+            <center><div class="text">Affordable Housing</div></center>
         </div>
       
         <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img src="http://historylink101.com/2/roman-villa.jpg" style="width:100%; height:100%;">
-          <div class="text">Bathhouses</div>
+            <img src="http://historylink101.com/2/roman-villa.jpg" style="width:100%; height:100%;">
+            <center><div class="text">Bathhouses</div></center>
         </div>
         <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
             <img src="https://img00.deviantart.net/a111/i/2007/049/5/f/marcus_licinius_crassus_by_bluehorseshoe.jpg" style="width:100%; height:100%;">
-            <div class="text"> About Us</div>
+            <center><div class="text">About Us</div></center>
         </div>
       
         <!-- Next and previous buttons -->
