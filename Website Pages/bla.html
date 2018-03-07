@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+        <title>Home</title>
     <link rel="stylesheet" media = "all" type="text/css"href="CrassusStylesheet.css">
 </head>
 
@@ -9,7 +10,6 @@
     //javascript sucks. 
     var slideIndex = 1;
     showSlides(slideIndex);
-    var slideIndex=1
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
@@ -21,7 +21,10 @@
         var j;
         //stupid javascript stuff. fetching html attributes by a class name. ala for loop
         var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
+        try{
+            var dots = document.getElementsByClassName("dot");}
+        catch(err){
+            var dots = 1;}
         //resets the index
         if (n > slides.length) {slideIndex = 1}
         //incase of a indexing error. try/except basically 
@@ -40,16 +43,32 @@
         dots[slideIndex-1].className += " active";
         setTimeout(showSlides, 5000); // Change image every 2 seconds
         }
-
+        var slideIndex = 0;
+    showSlides();
+    function randImage(n){
+        var num = Math.floor(Math.random() * 5);
+    }
 </script>
-<body>
-    <div>
+<body style="background: #999;">
+    <div>   
         <ul>
+            <span><p style="color:#fff; float: left; font-size: 10px">Our Address: Via dei Cerchi, 81, 00186 Roma RM, Italy</p></span>
             <li><a href = "bla.html"> Home</a></li>
             <li><a href = "aboutus.html">  About Crassus Realtors </a></li>
             <li><a href = "#"> Properties</a></li>
             <li><a href = "#"> Contact Us</a></li>
         </ul>
+    <div style = "padding: 40px;"></div>
+    </div>
+    <div><center>
+        <img src="https://github.com/joshbarbee/CrassusRealtors/blob/master/Images/testimonial1.PNG?raw=true" style="width:30%; height:80px;">
+        <img src="https://github.com/joshbarbee/CrassusRealtors/blob/master/Images/testimonial2.PNG?raw=true" style="width:30%; height:80px;"></center></div><div><center>
+        <img src="https://github.com/joshbarbee/CrassusRealtors/blob/master/Images/testimonial3.PNG?raw=true" style="width:30%; height:80px;">
+        <img src="https://github.com/joshbarbee/CrassusRealtors/blob/master/Images/testimonial4.PNG?raw=true" style="width:30%; height:80px;">
+    </center></div>
+    
+        
+</div>
     </div>
     <div style="padding:20px">
         <center><img src = "https://github.com/joshbarbee/CrassusRealtors/blob/master/Images/CrassusLogo.PNG?raw=true" style= "width: 300px; height: 150px"></center>
@@ -73,8 +92,8 @@
             <center><div class="text">Bathhouses</div></center>
         </div>
         <div class="mySlides fade">
-            <img src="https://img00.deviantart.net/a111/i/2007/049/5/f/marcus_licinius_crassus_by_bluehorseshoe.jpg" style="width:100%; height:100%;">
-            <center><div class="text">About Us</div></center>
+            <img src="https://github.com/joshbarbee/CrassusRealtors/blob/master/Images/FixedCrassus.jpg?raw=true" style="width:100%; height:100%;">
+            <center><div class="text">Me, Myself, and I</div></center>
         </div>
       
         <!-- Next and previous buttons -->
@@ -89,10 +108,15 @@
         <span class="dot" onclick="currentSlide(3)"></span> 
         <span class="dot" onclick="currentSlide(4)"></span> 
       </div>
-    <div style="padding:40px">
+    <div style="padding:40px; background:#fff; border: 1px solid black">
         <center><p class= LargeText> ----My Story----</p></center>
-    </div><div>
         <center><p class= LargeText>Ever since being a small Roman child, I wanted to own property and exert my control over Macedonia. And one of those dreams has came true today. After inheriting lots of money from my deceased father and brother, I purchased a burning apartment and rebuilt, then resold it for major profits. Thats where it all began.</p></center>
     </div>
+    <div style="padding:40px; background:#999; border: 1px solid black">
+        <h3></h3>
+    </div>
+    <footer style="background: #000; color: #fff;">
+        <center>Copyright 2018 by Josh Barbee made for Magistra Denning Latin Class</center>
+    </footer>
 </body>
 </html>
