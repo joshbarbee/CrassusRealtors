@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+        <script>
+             $(document).ready(function () { $('body').hide().fadeIn(1500).delay(6000)});
+        </script>
+        <script type = "text/javascript">
+        $(window).on("load",function() {
+        $(window).scroll(function() {
+        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $(".fade").each(function() {
+        var objectBottom = $(this).offset().top + $(this).outerHeight();     
+        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            if ($(this).css("opacity")==0) {$(this).fadeTo("2000", "0.8");}
+            } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity")==1) {$(this).fadeTo(2000,0);}}});}).scroll();}); //invoke scroll-handler on page-load});
+        </script>
+        <script>
+
+        </script>
+        <title>Emma Barbee</title>
+        <link rel="stylesheet" type="text/css" href="mainCss.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    </head>
+    <body style='background-color: white; opacity: 1; transition: 1s opacity;'>        
+
+        <div style= "background: #eee;">
+            <a href = "https://www.linkedin.com/in/emmabarbee/"> <img border = "0" src = "linkedin.png"></a>
+            <a href = "https://instagram.com/emmabarbee"> <img border = "0" src = "instagram.png"></a>
+            <a href = "https://instagram.com/emmabarbee"> <img border = "0" src = "googlePlus.png"></a>
+            <h9 class='title'>
+                <center>
+                    <pre style="padding-top: 30px; padding-bottom: 10px; color: #555; font-size: 50px">E M M A  B A R B E E</pre>
+                </center>
+            <h9>
+        </div>
+            <nav role="navigation">
+                <ul>
+                    <li><a href = ""> About Me </a></li>
+                    <li><a href = ""> Fine Arts </a>
+                        <ul class="dropdown">
+                            <li><a href="#"class="dropdown">The Andy</a></li> 
+                            <li><a href="#"class="dropdown">Browsing</a></li> 
+                            <li><a href="#"class="dropdown">Artist X Designer</a></li> 
+                            <li><a href="#"class="dropdown">Print Pieces</a></li> 
+                        </ul>
+                    </li>
+                    <li><a href = ""> Graphic Design </a>
+                        <ul>
+                            <li><a href="#" class="dropdown">Minty Fresh Gum Mockup</a></li> 
+                            <li><a href="#" class="dropdown">Oscar Wilde Matchbox Mockup</a></li> 
+                            <li><a href="#" class="dropdown">Trash Can Re-Design</a></li> 
+                            <li><a href="#" class="dropdown">ATCQ Song Re-Release</a></li> 
+                            <li><a href="#" class="dropdown">Commissioned Work</a></li> 
+                        </ul>
+                    </li>
+                    <li><a href = ""> New Media </a>
+                        <ul>
+                            <li><a href="#" class="dropdown">Don't Look At Me</a></li> 
+                            <li><a href="#" class="dropdown">One Week's Trash</a></li> 
+                            <li><a href="#" class="dropdown">Gifs</a></li> 
+                            <li><a href="#" class="dropdown">Photography</a></li>  
+                        </ul>
+                    </li>
+                    <li><a href = ""> Fashion Design </a>
+                        <ul>
+                            <li><a href="#" class="dropdown">Women Designers Vs Fashion</a></li> 
+                            <li><a href="#" class="dropdown">My Eyes Are Up Here</a></li> 
+                            <li><a href="#" class="dropdown">Flower Pop</a></li> 
+                            <li><a href="#" class="dropdown">A Bit Too Thick</a></li> 
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        <div>
+            <center>
+                <img src="sunglasses.gif" style="position:relative; z-index: -1;" /> 
+            </center>
+        </div>
+        <div class="fade-in one" style="text-align: center; padding-bottom: 10px; color:black;">
+            <center class="fade">H</center>
+            <center class="fade">i</center>
+            <center class="fade">, </center>
+            <center class="fade"><pre> </pre></center>
+            <center class="fade">I</center>
+            <center class="fade">'</center>
+            <center class="fade">m</center>
+            <center class="fade"><pre> </pre></center>
+            <center class="fade">E</center>
+            <center class="fade">m</center>
+            <center class="fade">m</center>
+            <center class="fade">a</center>
+        </div>        
+        <div style="background-color:#eee; padding-top: 30px; padding-bottom:30px;">
+            <center>
+                <img src="EmmaScreenshot.webp" alt="Failed to load picture">
+            </center>
+        </div>            
+        <script>
+            $(function() {
+            $('body').removeClass('fade-out');
+            });
+        </script>
+    </body>
+</html>

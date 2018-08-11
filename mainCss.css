@@ -1,0 +1,124 @@
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+#Title {
+    font-family: 'Lato', sans-serif;
+    font-size: 60px;
+    text-decoration: none;
+    list-style-type: none;
+    position: relative;
+}
+
+.dropdown{
+    font-family: 'Ubuntu';
+    font-size: 19px;
+    padding-top:0px;
+    overflow-wrap: break-word;
+    border-bottom: 2px white;
+}
+
+a {
+    text-decoration: none;
+    width: 250px;
+  }
+  nav {
+      font-family: monospace;
+  }
+  ul {
+      text-align: center;
+      padding: 0;
+      list-style-type: none;
+  }
+  li {
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  } 
+  li a {
+    float: center;
+    display: block;
+    color: #000;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow: hidden;
+    border-bottom: 2px black;
+  }
+  
+  li:hover {
+    background: #999;
+    cursor: pointer;
+  }
+  
+  ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    left: 0;
+    display: none;
+    border-bottom: 2px black;
+    
+  }
+  
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+    background-color: #aaa;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    border-bottom: 2px white;
+  }
+  
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
+.fade {
+    margin: 10px;
+    padding: 0px;
+    background-color: white;
+    opacity: 1;
+    font-size: 40px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: "Ubuntu", bold
+  }
+
+  .container {position: fixed; top: 25%; left: 25%;}
+
+  /* make keyframes that tell the start state and the end state of our object */
+  @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  
+  .fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+  
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+  }
+  
+  .fade-in.one {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+  }
+  
+  
